@@ -5,7 +5,7 @@ using CretaceousApi.Models;
 namespace CretaceousApi.Controllers.v2
 {
   [ApiController]
-  [Route("api/v{version:apiVersion}[controller]")]
+  [Route("api/v{version:apiVersion}/[controller]")]
   [ApiVersion("2.0")]
   public class AnimalsController : ControllerBase
   {

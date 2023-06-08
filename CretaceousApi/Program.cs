@@ -16,13 +16,6 @@ builder.Services.AddDbContext<CretaceousApiContext>(
                   )
                 );
 
-builder.Services.AddVersionedApiExplorer(setup =>
-{
-    setup.GroupNameFormat = "'v'VVV";
-    setup.SubstituteApiVersionInUrl = true;
-});
-
-
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
