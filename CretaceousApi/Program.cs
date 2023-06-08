@@ -8,8 +8,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<CretaceousApiContext>(
                   dbContextOptions => dbContextOptions
                     .UseMySql(
-                      builder.Configuration["ConnectionStrings:DefaultConnection"], 
-                      ServerVersion.AutoDetect(builder.Configuration["ConnectionStrings:DefaultConnection"]
+                      builder.Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(builder.Configuration["ConnectionStrings:DefaultConnection"]
                     )
                   )
                 );
