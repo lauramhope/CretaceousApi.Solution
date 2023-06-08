@@ -1,11 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CretaceousApi.Models;
+using System.Linq;
+using System.Collections.Generic;
 
-namespace CretaceousApi.Controllers
+namespace CretaceousApi.Controllers.v1
 {
-  [Route("api/[controller]")]
   [ApiController]
+  [Route("api/v{version:apiVersion}[controller]")]
+  [ApiVersion("1.0")]
   public class AnimalsController : ControllerBase
   {
     private readonly CretaceousApiContext _db;
